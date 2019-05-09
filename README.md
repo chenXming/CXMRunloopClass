@@ -17,12 +17,12 @@
  */
 - (void)addExecuteTask:(ResidentTask)task;
 ```
-#####1.实例化线程对象并运行`run`：
+1.实例化线程对象并运行`run`：
 ```  
 self.myThread = [[CXMResidentThread alloc] init];
     [self.myThread run];
 ```
-#####2.把耗时操作传给Block
+2.把耗时操作传给Block
 ```
  [self.myThread addExecuteTask:^{
 //        [NSThread sleepForTimeInterval:3];        
