@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CXMResidentThread : NSObject
 
+//最大任务加载数 默认 1
+@property (nonatomic,assign) NSUInteger maxQueue;
 
 /*
  * 运行常驻线程
@@ -29,6 +31,10 @@ NS_ASSUME_NONNULL_BEGIN
  * 添加任务 进入线程 串行执行
  */
 - (void)addExecuteTask:(ResidentTask)task;
+/*
+ * 删除所有任务
+ */
+- (void)removeAllTask;
 
 @end
 
